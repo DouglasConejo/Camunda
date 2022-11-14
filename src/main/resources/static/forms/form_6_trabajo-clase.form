@@ -1,0 +1,24 @@
+{
+  "components": [
+    {
+      "text": "# Políticas",
+      "type": "text",
+      "id": "Field_0gdvhpt"
+    },
+    {
+      "label": "Ingrese Políticas",
+      "type": "textfield",
+      "id": "Field_0vtuooi",
+      "key": "politicas"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0vivnnv",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.4.2"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

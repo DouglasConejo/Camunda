@@ -1,0 +1,24 @@
+{
+  "components": [
+    {
+      "text": "# Asigne reclutador",
+      "type": "text",
+      "id": "Field_0sc5nc3"
+    },
+    {
+      "label": "Asignar",
+      "type": "textfield",
+      "id": "Field_0zpz9mb",
+      "key": "asigna"
+    }
+  ],
+  "type": "default",
+  "id": "Form_02vt7pk",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.4.2"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

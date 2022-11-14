@@ -1,0 +1,24 @@
+{
+  "components": [
+    {
+      "text": "# Realice su firma",
+      "type": "text",
+      "id": "Field_1tsyfk4"
+    },
+    {
+      "label": "Firmar",
+      "type": "textfield",
+      "id": "Field_0mq3v2u",
+      "key": "firma"
+    }
+  ],
+  "type": "default",
+  "id": "Form_07gmz6o",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.4.2"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

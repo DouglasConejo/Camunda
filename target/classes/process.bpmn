@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0fr9mxs" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.5.0">
+  <bpmn:process id="primer-camunda-process" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0eivbjr</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_1vho2af">
+      <bpmn:incoming>Flow_0hoeg5b</bpmn:incoming>
+      <bpmn:incoming>Flow_0p93hek</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0eivbjr" sourceRef="StartEvent_1" targetRef="RegistrarUsuario" />
+    <bpmn:sequenceFlow id="Flow_0u0nz2x" sourceRef="RegistrarUsuario" targetRef="RegistroDatos" />
+    <bpmn:sequenceFlow id="Flow_1b1a6l5" sourceRef="RegistroDatos" targetRef="Gateway_1nonkj4" />
+    <bpmn:userTask id="RegistrarUsuario" name="Registro de Usuario" camunda:formKey="camunda-forms:/forms/form_1.form">
+      <bpmn:incoming>Flow_0eivbjr</bpmn:incoming>
+      <bpmn:outgoing>Flow_0u0nz2x</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="RegistroDatos" name="Registro de Datos  " camunda:formKey="camunda-forms:/forms/form_2.form">
+      <bpmn:incoming>Flow_0u0nz2x</bpmn:incoming>
+      <bpmn:outgoing>Flow_1b1a6l5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_1nonkj4">
+      <bpmn:incoming>Flow_1b1a6l5</bpmn:incoming>
+      <bpmn:outgoing>Flow_13cg848</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1ux4ix0</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_13cg848" name="hipotecario?" sourceRef="Gateway_1nonkj4" targetRef="montoPrestamoHipotecario">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{tipo=="hipotecario"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0hoeg5b" sourceRef="montoPrestamoHipotecario" targetRef="Event_1vho2af" />
+    <bpmn:sequenceFlow id="Flow_1ux4ix0" name="personal?" sourceRef="Gateway_1nonkj4" targetRef="montoPrestamoPersonal">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{tipo=="personal"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0p93hek" sourceRef="montoPrestamoPersonal" targetRef="Event_1vho2af" />
+    <bpmn:userTask id="montoPrestamoHipotecario" name="Calcular monto de prestamo hipotecario" camunda:formKey="camunda-forms:/forms/form_3.form">
+      <bpmn:incoming>Flow_13cg848</bpmn:incoming>
+      <bpmn:outgoing>Flow_0hoeg5b</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="montoPrestamoPersonal" name="Calcular Monto Prestamo personal" camunda:formKey="camunda-forms:/forms/form_4.form">
+      <bpmn:incoming>Flow_1ux4ix0</bpmn:incoming>
+      <bpmn:outgoing>Flow_0p93hek</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="primer-camunda-process">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ve7hbe_di" bpmnElement="RegistrarUsuario">
+        <dc:Bounds x="260" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1lzix09_di" bpmnElement="RegistroDatos">
+        <dc:Bounds x="420" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1vho2af_di" bpmnElement="Event_1vho2af">
+        <dc:Bounds x="972" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1nonkj4_di" bpmnElement="Gateway_1nonkj4" isMarkerVisible="true">
+        <dc:Bounds x="605" y="92" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0de3kfc_di" bpmnElement="montoPrestamoHipotecario">
+        <dc:Bounds x="760" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pp4cw9_di" bpmnElement="montoPrestamoPersonal">
+        <dc:Bounds x="580" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0eivbjr_di" bpmnElement="Flow_0eivbjr">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="260" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0u0nz2x_di" bpmnElement="Flow_0u0nz2x">
+        <di:waypoint x="360" y="117" />
+        <di:waypoint x="420" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1b1a6l5_di" bpmnElement="Flow_1b1a6l5">
+        <di:waypoint x="520" y="117" />
+        <di:waypoint x="605" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13cg848_di" bpmnElement="Flow_13cg848">
+        <di:waypoint x="655" y="117" />
+        <di:waypoint x="760" y="117" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="678" y="99" width="61" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hoeg5b_di" bpmnElement="Flow_0hoeg5b">
+        <di:waypoint x="860" y="117" />
+        <di:waypoint x="972" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ux4ix0_di" bpmnElement="Flow_1ux4ix0">
+        <di:waypoint x="630" y="142" />
+        <di:waypoint x="630" y="200" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="575" y="163" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0p93hek_di" bpmnElement="Flow_0p93hek">
+        <di:waypoint x="680" y="240" />
+        <di:waypoint x="990" y="240" />
+        <di:waypoint x="990" y="135" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,24 @@
+{
+  "components": [
+    {
+      "text": "#Monto del prestamo personal",
+      "type": "text",
+      "id": "Field_13q8iyy"
+    },
+    {
+      "label": "Ingrese el monto del prestamo personal",
+      "type": "textfield",
+      "id": "Field_18nohb4",
+      "key": "montoPersonal"
+    }
+  ],
+  "type": "default",
+  "id": "Form_4",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

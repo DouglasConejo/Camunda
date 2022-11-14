@@ -1,0 +1,36 @@
+{
+  "components": [
+    {
+      "text": "Registro de Usuario",
+      "type": "text",
+      "id": "Field_0nb5x17"
+    },
+    {
+      "label": "Nombre",
+      "type": "textfield",
+      "id": "Field_0z597kc",
+      "key": "nombre"
+    },
+    {
+      "label": "Primer Apellido",
+      "type": "textfield",
+      "id": "Field_0pccg4d",
+      "key": "apellido1"
+    },
+    {
+      "label": "Segundo Apellido",
+      "type": "textfield",
+      "id": "Field_0s6m9um",
+      "key": "apellido2"
+    }
+  ],
+  "type": "default",
+  "id": "Form1",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.4.2"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

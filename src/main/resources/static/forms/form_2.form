@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "text": "SOLICITUD DE CREDITO",
+      "type": "text",
+      "id": "Field_1lpi0oi"
+    },
+    {
+      "label": "Monto",
+      "type": "textfield",
+      "id": "Field_0gx1kcr",
+      "key": "monto"
+    },
+    {
+      "values": [
+        {
+          "label": "Hipotecario",
+          "value": "hipotecario"
+        },
+        {
+          "label": "Personal",
+          "value": "personal"
+        }
+      ],
+      "label": "Radio",
+      "type": "radio",
+      "id": "Field_1txkxib",
+      "key": "tipo"
+    }
+  ],
+  "type": "default",
+  "id": "Form2",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.4.2"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

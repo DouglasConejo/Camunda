@@ -1,0 +1,53 @@
+{
+  "components": [
+    {
+      "text": "# Proyecto",
+      "type": "text",
+      "id": "Field_1mm6xh9"
+    },
+    {
+      "label": "Nombre",
+      "type": "textfield",
+      "id": "Field_09i78nk",
+      "key": "field_0wl3niu"
+    },
+    {
+      "label": "Descripcion Proyecto",
+      "type": "textfield",
+      "id": "Field_1tettni",
+      "key": "DescripcionProyecto"
+    },
+    {
+      "label": "Tecnología de proyecto",
+      "type": "textfield",
+      "id": "Field_19g604c",
+      "key": "Tecnologíaproyecto"
+    },
+    {
+      "values": [
+        {
+          "label": "Si",
+          "value": "si"
+        },
+        {
+          "label": "No",
+          "value": "no"
+        }
+      ],
+      "label": "Desea Mas",
+      "type": "radio",
+      "id": "Field_13p7pzm",
+      "key": "field_0mt4g5r",
+      "defaultValue": "value"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0fba5mm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.4.2"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}

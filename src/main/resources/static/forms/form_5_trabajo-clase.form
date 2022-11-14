@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "text": "# Nuevo Cliente",
+      "type": "text",
+      "id": "Field_0ll3ys2"
+    },
+    {
+      "label": "Nombre de la Empresa",
+      "type": "textfield",
+      "id": "Field_0wqhpkj",
+      "key": "nombreEmpresa"
+    },
+    {
+      "label": "Representando",
+      "type": "textfield",
+      "id": "Field_0ccmfuu",
+      "key": "respresentan"
+    },
+    {
+      "label": "Dirección",
+      "type": "textfield",
+      "id": "Field_0bu15mf",
+      "key": "direccion"
+    },
+    {
+      "label": "Teléfono",
+      "type": "textfield",
+      "id": "Field_1qkp9iu",
+      "key": "teléfono"
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "id": "Field_172im54",
+      "key": "email"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0td02f4",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.4.2"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 5
+}
